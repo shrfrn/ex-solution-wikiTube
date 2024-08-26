@@ -1,0 +1,19 @@
+.wiki-result {
+    padding: 0.5em;
+    border: 0.4px solid #000;
+    margin: 1em auto;
+    border-radius: 5px;
+}
+
+.wiki-result a {
+    color: black;
+}
+
+.wiki-result a:hover {
+    color: var(--color2);
+    transition: .5s;
+}
+
+.searchmatch {
+    color: gold;
+}

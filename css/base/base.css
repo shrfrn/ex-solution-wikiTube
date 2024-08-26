@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+

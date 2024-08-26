@@ -1,0 +1,31 @@
+.videos-container {
+    flex-basis: 40%;
+    height: fit-content;
+    overflow: auto;
+    padding: 10px;
+}
+
+.video-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    background-color: #444;
+    color: var(--bg2);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: .8em;
+    overflow: hidden;
+}
+
+.video-card:hover {
+    background-color: #222;
+    transition: .5s;
+}
+
+.video-card img {
+    height: 90px;
+}
+
+.video-title {
+    margin-inline-start: 1rem;
+}
