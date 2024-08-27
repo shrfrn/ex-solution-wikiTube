@@ -11,27 +11,22 @@
 <body onload="onInit()">
     <div class="container">
         <header>
-            <nav class="nav-header">
-                <section class="logo">WikiTube</section>
-                <section class="search-container">
-                    <form onsubmit="onSearch(event)">
-                        <input type="search" class="search-input" placeholder="Look for videos" />
-                        <button class="search-btn">Search</button>
-                    </form>
-                </section>
-            </nav>
+            <section class="logo">WikiTube</section>
+            <section class="search-container">
+                <form onsubmit="onSearch(event)">
+                    <input type="search" class="search-input" placeholder="Look for videos" />
+                    <button class="search-btn">Search</button>
+                </form>
+            </section>
         </header>
         <main class="main-container">
             <section class="video-and-wiki">
                 <section class="main-video">
-                    <iframe width="420" height="315" src="https://www.youtube.com/embed/aoki_izFGOg">
-                    </iframe>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/aoki_izFGOg"></iframe>
                 </section>
-                <section class="wiki-container">
-                </section>
+                <section class="wiki-container"></section>
             </section>
-            <section class="videos-container">
-            </section>
+            <section class="videos-container"></section>
         </main>
 
         <footer>
@@ -54,6 +49,7 @@
             </div>
         </div>
     </div>
+
     <script src="lib/axios.js"></script>
     <script src="js/services/util.service.js"></script>
     <script src="js/services/wikitube.service.js"></script>
