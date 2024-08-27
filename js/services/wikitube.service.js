@@ -45,7 +45,7 @@ function getWiki(keyword) {
 
 	return axios.get(`${wikiURL}&srsearch=${keyword}`)
         .then(({ data }) => {
-            gWikiMap[keyword] = data.query.search.slice(0, 3).map(_getWikiInfo)
+            gWikiMap[keyword] = data.query.search.slice(0, 5).map(_getWikiInfo)
             saveToStorage(WIKIS_STORAGE_KEY, gWikiMap)
             return gWikiMap[keyword]
         })

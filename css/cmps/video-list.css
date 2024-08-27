@@ -1,31 +1,34 @@
-.videos-container {
-    flex-basis: 40%;
-    height: fit-content;
-    overflow: auto;
-    padding: 10px;
-}
-
 .video-card {
     display: flex;
     align-items: center;
-    margin-bottom: 1.3rem;
-    background-color: #444;
+    gap: 1rem;
+    
+    padding: 0.5rem;
+    background-color: #665;
+    border-radius: 5px;
+    margin-block-end: .5rem;
+
     color: var(--bg2);
     cursor: pointer;
-    border-radius: 5px;
     font-size: .8em;
-    overflow: hidden;
+    transition: background-color .5s;
 }
 
 .video-card:hover {
     background-color: #222;
-    transition: .5s;
-}
-
-.video-card img {
-    height: 90px;
 }
 
 .video-title {
-    margin-inline-start: 1rem;
+    margin: 0;
+
+    color:beige;
+    font-weight: normal;
+}
+
+@media (width >= 750px) {
+    
+    .videos-container {
+        flex-basis: 40%;
+    }
+    
 }

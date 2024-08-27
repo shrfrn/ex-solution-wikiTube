@@ -25,8 +25,8 @@ function renderVideoList(videos) {
 	const strHTMLs = videos.map(({ id, title, thumbnail }) => {
 		return `
             <article onclick="onChangeVideo('${id}')" class="video-card">
-                <img class="video-thumbnail" src="${thumbnail}" alt="">
-                <h3 class="video-title">${title}</h3>
+                <img class="video-thumbnail" src="${thumbnail}" alt="Video thumbnail">
+                <p class="video-title">${title}</p>
             </article>`
 	})
 	document.querySelector('.videos-container').innerHTML = strHTMLs.join('')

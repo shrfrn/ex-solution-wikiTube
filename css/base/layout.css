@@ -5,20 +5,23 @@
 }
 
 .video-and-wiki {
-    flex-basis: 60%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding-left: 4rem;
 }
 
-@media (min-width: 750px) {
+@media (width >= 750px) {
  
     .main-container {
         display: flex;
+        gap: .5rem;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
+
+    .video-and-wiki {
+        flex-basis: 60%;
+    }    
+    
     header .logo {
         font-size: 3rem;
     }

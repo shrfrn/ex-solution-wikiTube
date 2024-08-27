@@ -1,12 +1,18 @@
 .wiki-result {
     padding: 0.5em;
     border: 0.4px solid #000;
-    margin: 1em auto;
+    margin: .5rem auto;
     border-radius: 5px;
+    color: lightgray;
 }
 
 .wiki-result a {
-    color: black;
+    color: inherit;
+}
+
+.wiki-result p {
+    margin: 0;
+    font-size: .9rem;
 }
 
 .wiki-result a:hover {
