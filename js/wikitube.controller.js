@@ -1,4 +1,12 @@
-'use strict'
+import { wtService } from "./services/wikitube.service.js"
+
+window.onInit = onInit
+window.onChangeVideo = onChangeVideo
+window.onSearch = onSearch
+window.onClearHistory = onClearHistory
+window.onOpenThemeModal = onOpenThemeModal
+window.onChangeTheme = onChangeTheme
+window.onCloseModal = onCloseModal
 
 var gKeepResolve // Needed for Modal Bonus
 
@@ -10,7 +18,7 @@ function onInit() {
 
 function searchAndRender(txt) {
 	//Youtube
-	getVideos(txt)
+	wtService.getVideos(txt)
         .then(videos => {
             const selectedVideoId = videos[0]?.id
             if (!selectedVideoId) return alert('No matching results')
@@ -21,7 +29,7 @@ function searchAndRender(txt) {
         })
 
 	//Wiki
-	getWiki(txt)
+	wtService.getWiki(txt)
         .then(renderWikis)
 }
 
@@ -66,7 +74,7 @@ function onSearch(ev) {
 }
 
 function renderHistory() {
-	const keywords = getKeywords()
+	const keywords = wtService.getKeywords()
 
 	if (keywords.length === 0) var strHTMLs = 'No keywords to show'
 	else strHTMLs = keywords.map(keyword => `<span>${keyword}</span>`)
@@ -79,7 +87,7 @@ function onClearHistory() {
         .then(userRes => {
             if (!userRes) return
 
-            clearHistory()
+            wtService.clearHistory()
             renderHistory()
         })
 }
