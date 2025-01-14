@@ -10,15 +10,19 @@ function onInit() {
 
 function searchAndRender(txt) {
 	//Youtube
-	getVideos(txt).then(videos => {
-		const selectedVideoId = videos[0].id
-		loadVideo(selectedVideoId)
-		renderVideoList(videos)
-		renderHistory()
-	})
+	getVideos(txt)
+        .then(videos => {
+            const selectedVideoId = videos[0]?.id
+            if (!selectedVideoId) return alert('No matching results')
+
+            loadVideo(selectedVideoId)
+            renderVideoList(videos)
+            renderHistory()
+        })
 
 	//Wiki
-	getWiki(txt).then(renderWikis)
+	getWiki(txt)
+        .then(renderWikis)
 }
 
 function renderVideoList(videos) {
@@ -71,18 +75,18 @@ function renderHistory() {
 }
 
 function onClearHistory() {
-	doConfirm().then(userRes => {
-		if (userRes) {
-			clearHistory()
-			renderHistory()
-		}
-	})
+	doConfirm()
+        .then(userRes => {
+            if (!userRes) return
+
+            clearHistory()
+            renderHistory()
+        })
 }
 
 function onOpenThemeModal() {
-	askUser().then(color => {
-		document.querySelector('body').style.backgroundColor = color
-	})
+	askUser()
+        .then(color => document.querySelector('body').style.backgroundColor = color)
 }
 
 function askUser() {

@@ -24,10 +24,6 @@ function getVideos(keyword) {
         })
 }
 
-function _getWikiInfo({ title, snippet }) {
-	return { title, snippet }
-}
-
 function _getVideoInfo(video) {
 	const { id, snippet } = video
 	const { title, thumbnails } = snippet
@@ -49,6 +45,10 @@ function getWiki(keyword) {
             saveToStorage(WIKIS_STORAGE_KEY, gWikiMap)
             return gWikiMap[keyword]
         })
+}
+
+function _getWikiInfo({ title, snippet }) {
+	return { title, snippet }
 }
 
 function clearHistory() {
