@@ -66,9 +66,10 @@ function onSearch(ev) {
 }
 
 function renderHistory() {
+    var strHTMLs = ''
 	const keywords = getKeywords()
 
-	if (keywords.length === 0) var strHTMLs = 'No keywords to show'
+	if (keywords.length === 0) strHTMLs = 'No keywords to show'
 	else strHTMLs = keywords.map(keyword => `<span>${keyword}</span>`)
 
 	document.querySelector('.keywords-container').innerHTML = strHTMLs
